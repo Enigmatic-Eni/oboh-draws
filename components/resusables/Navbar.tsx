@@ -1,14 +1,7 @@
 import React from 'react'
 
 import { IoIosArrowDown } from "react-icons/io";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+
 
 export default function Navbar() {
   return (
@@ -28,7 +21,7 @@ export default function Navbar() {
 
 
     </div>
-    <DropdownMenu/>
+   
     </div>
   )
 }
