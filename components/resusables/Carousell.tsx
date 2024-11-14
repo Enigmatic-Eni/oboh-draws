@@ -12,16 +12,19 @@ import {
 export default function Carousell() {
   return (
     <div>
-    <div className=' bg-[#d5d4d3] px-14 '>
+    <div className=' bg-[#d5d4d3] px-14 pt-16'>
      <Carousel  plugins={[
         Autoplay({
           delay: 5000,
         }),
       ]}>
   <CarouselContent>
-    <CarouselItem className=' flex  justify-center'><img src="nightmare.jpg" alt="" className="w-[600px] h-[520px] object-cover"  /></CarouselItem>
-    <CarouselItem  className=' flex  justify-center' ><img src="Living in the clouds2.jpg" alt=""  className="w-[500px] h-[520px] object-cover "  /></CarouselItem>
-    <CarouselItem  className=' flex  justify-center'><img src="meadows.jpg" alt=""  className="w-[500px] h-[520px] object-cover " /></CarouselItem>
+    <CarouselItem className=' flex  justify-center'><img src="/carousel/pic1.jpg" alt="" className="w-full h-[420px] object-cover"  /></CarouselItem>
+    <CarouselItem  className=' flex  justify-center' ><img src="/carousel/pic2.jpg" alt=""  className="w-screen h-[420px] object-cover "  /></CarouselItem>
+    <CarouselItem  className=' flex  justify-center'><img src="/carousel/pic3.jpg" alt=""  className="w-screen h-[420px] object-cover " /></CarouselItem>
+    <CarouselItem className=' flex  justify-center'><img src="/carousel/song of songs 1vs15.jpg" alt="" className="w-full h-[420px] object-cover"  /></CarouselItem>
+    <CarouselItem  className=' flex  justify-center'><img src="/carousel/pic3.jpg" alt=""  className="w-screen h-[420px] object-cover " /></CarouselItem>
+    <CarouselItem  className=' flex  justify-center' ><img src="/carousel/pic2.jpg" alt=""  className="w-screen h-[420px] object-cover "  /></CarouselItem>
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
