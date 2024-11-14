@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ui/button'
+
 import { IoIosArrowDown } from "react-icons/io";
 import {
     DropdownMenu,
@@ -28,6 +28,7 @@ export default function Navbar() {
 
 
     </div>
+    <DropdownMenu/>
     </div>
   )
 }
