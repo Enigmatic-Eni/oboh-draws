@@ -1,10 +1,18 @@
-import { Button } from '@/components/ui/button'
+import Carousel from '@/components/resusables/Carousell'
+import Footer from '@/components/resusables/Footer'
+import Navbar from '@/components/resusables/Navbar'
+import ShopPrints from '@/components/resusables/ShopPrints'
 import React from 'react'
 
 export default function index() {
   return (
-    <div>index
-        <Button variant='outline'>Button</Button>
+    <div className=''>
+      <Navbar/>
+      <Carousel/>
+      <ShopPrints/>
+<Footer/>
+    
     </div>
   )
 }
+
