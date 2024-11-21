@@ -13,7 +13,7 @@ export default function Navbar() {
     setIsDropdownOpen(prev => !prev);
   };
 
-  const toggleDropdown2 = (event) => {
+  const toggleDropdown2 = () => {
     setIsDropdownOpen2(prev => !prev);
   };
 
