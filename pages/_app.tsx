@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 
 
 const inter = Raleway({
-  weight: ['100', '200', '300', '400', '500', '700'],
+  weight: ['100', '200', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
 });
 

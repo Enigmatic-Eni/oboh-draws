@@ -35,8 +35,34 @@ body {
   visibility: visible;  
   transform: translateY(0); 
   pointer-events: auto; 
-}     
+}  
+.mansory-img {
+  height: auto; 
+  display: block; 
+  margin-bottom: 10px;
+  break-inside: avoid;
+} 
 
+.mansory {
+  padding: 30px;
+  columns: 3;
+  column-gap: 10px;
+}
+
+.box{
+  overflow: hidden; 
+   
+}
+@media(max-width: 870px){
+  .mansory{
+    columns: 2;
+  }
+}
+@media(max-width: 500px){
+  .mansory{
+    columns: 1;
+  }
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

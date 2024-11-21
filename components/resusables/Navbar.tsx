@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { FaAngleRight } from "react-icons/fa6";
+import Link from 'next/link';
 
 
 export default function Navbar() {
@@ -56,7 +57,9 @@ export default function Navbar() {
               <div className={`dropdown ${isDropdownOpen ? 'open' : ''} mt-3 text-[#545353] bg-[#e8e8e6] left-0 top-full text-sm`}>
                 <ul className="font-medium">
                   <li className=" border-b-2 border-[#C1C1C1] py-2 px-3">
-                    <a href="#">Personal Artworks</a>
+                    <Link href={"/personalArtworks"}>
+                    Personal Artworks
+                    </Link>
                   </li>
                   <li className=" border-b-2 border-[#C1C1C1] py-2 px-3">
                     <a href="#">Rough Artworks</a>
