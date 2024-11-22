@@ -3,8 +3,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaAngleRight } from "react-icons/fa6";
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { RiArrowDropDownLine } from "react-icons/ri";
 
 
 export default function Navbar() {
