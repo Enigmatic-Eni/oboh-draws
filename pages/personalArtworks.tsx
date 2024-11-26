@@ -1,6 +1,7 @@
 import Navbar from '@/components/resusables/Navbar'
 import React from 'react';
 import Image from 'next/image';
+import Footer from '@/components/resusables/Footer';
 
 export default function PersonalArtworks() {
     return (
@@ -53,6 +54,7 @@ export default function PersonalArtworks() {
                     <Image alt='' src='/personal-artworks/Living in the clouds2.jpg' width={300} height={300} layout="responsive" quality={90} className='mansory-img transition-transform duration-300 hover:scale-105 hover:cursor-pointer' /></div>
             </div>
 
+            <Footer/>
         </div>
     )
 }
