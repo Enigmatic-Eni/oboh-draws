@@ -1,13 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
-import { FaAngleRight } from "react-icons/fa6";
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -16,14 +14,10 @@ export default function Navbar() {
     setIsDropdownOpen(prev => !prev);
   };
 
-  const toggleDropdown2 = () => {
-    setIsDropdownOpen2(prev => !prev);
-  };
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsDropdownOpen(false);
-      setIsDropdownOpen2(false);
     }
   };
   const toggleSidebar = () => {
