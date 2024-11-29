@@ -12,7 +12,7 @@ export default function index() {
       <Carousel/>
       <ShopPrints/>
       </div>
-    
+    <Footer/>
     </div>
   )
 }
