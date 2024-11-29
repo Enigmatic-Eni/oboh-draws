@@ -7,6 +7,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const dropdownRef = useRef(null);
 
   const toggleDropdown = (event) => {
@@ -20,9 +21,16 @@ export default function Navbar() {
       setIsDropdownOpen(false);
     }
   };
-  const toggleSidebar = () => {
+  const toggleSidebar = (
+    
+  ) => {
+    
     setIsSidebarOpen(!isSidebarOpen);
   };
+const toggleTopBar = (event) => {
+  event.preventDefault();
+  setIsDropdownOpen2(!isDropdownOpen2)
+}
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -50,10 +58,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Sidebar  (Only shows on small screen)*/}
+        {/* Topbar  (Only shows on small screen)*/}
         <div
           className={`fixed inset-y-0 top-0 transform ${isSidebarOpen ? "translate-y-0" : "-translate-y-full"
-            } transition-transform duration-300 ease-in-out bg-[#e8e8e6] w-full h-60 z-50 left-0 shadow-lg`}
+            } transition-transform duration-300 ease-in-out bg-[#e8e8e6] w-full h-80 z-50 left-0 shadow-lg`}
         >
           <div className="flex justify-between px-6 pt-6  items-center">
             <Link href="/" className=' cursor-pointer'>
@@ -68,16 +76,53 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-              <li className=' '>
+              <li onMouseEnter={() => setIsDropdownOpen2(true)} 
+            onClick={toggleTopBar}
+            className='relative'>
                 <a
-                  onClick={toggleDropdown}
-                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  // onClick={toggleDropdown}
+                  // onMouseEnter={() => setIsDropdownOpen(true)}
                   href="portfolio"
                   className='flex items-center hover:font-bold cursor-pointer hover:text-[#a9bdcf]'
                 >
                   Portfolio <IoIosArrowDown className='ml-3' />
                 </a>
+                {isDropdownOpen2 && (
+          
+<div  className=' absolute left-1/2 transform -translate-x-1/2 mt-2 '  
+            onMouseLeave={() => setIsDropdownOpen2(false)}
+>
+<ul className="bg-[#e8e8e6] shadow-lg w-60 rounded-lg text-sm">
+<Link href={"/personalArtworks"}>
+<li className=" block px-4 py-2 hover:bg-[#d1d1cf]">
+    Personal Artworks
+</li>
+  </Link>
+  <Link href={"/roughArtworks"}>
+<li className=" block px-4 py-2 hover:bg-[#d1d1cf]">
+    Rough Artworks
+</li>
+  </Link>
+<Link href={"/sketchBooks"}>
+<li className="block px-4 py-2 hover:bg-[#d1d1cf]">
+    Sketch Books
+</li>
+  </Link>
+
+  <Link href={"/commissions"}>
+  <li className=" block px-4 py-2 hover:bg-[#d1d1cf]">
+    Commissions
+  </li>
+  </Link>
+</ul>
+</div>
+            )}
               </li>
+         {isDropdownOpen2 && (
+          <div className=' h-20'>
+            
+          </div>
+         )}
               <li>
                 <a href="#" className='hover:font-bold cursor-pointer hover:text-[#a9bdcf]'>About</a>
               </li>
@@ -99,13 +144,14 @@ export default function Navbar() {
                 <a
                   onClick={toggleDropdown}
                   onMouseEnter={() => setIsDropdownOpen(true)}
+                  
                   href="portfolio"
                   className='flex items-center hover:font-bold cursor-pointer hover:text-[#a9bdcf]'
                 >
                   Portfolio <IoIosArrowDown className='ml-3' />
                 </a>
               </li>
-              <div className={`dropdown ${isDropdownOpen ? 'open' : ''} mt-3 text-[#545353] bg-[#e8e8e6] left-0 top-full text-sm`}>
+              <div onMouseLeave={() => setIsDropdownOpen(false)} className={`dropdown ${isDropdownOpen ? 'open' : ''} mt-3 text-[#545353] bg-[#e8e8e6] left-0 top-full text-sm`}>
                 <ul className="font-medium">
                   <li className=" border-b-2 border-[#C1C1C1] py-2 px-3">
                     <Link href={"/personalArtworks"}>

@@ -89,6 +89,31 @@ const imagesData = [
     name: "Children Book Illustrations",
     src: '/children/IMG_2948.jpg'
   },
+  {
+    id: 18,
+    name: "Book Cover Illustrations",
+    src: '/book-cover/2.jpg'
+  },
+  {
+    id: 19,
+    name: "Book Cover Illustrations",
+    src: '/book-cover/africansound.jpg'
+  },
+  {
+    id: 20,
+    name: "Book Cover Illustrations",
+    src: '/book-cover/Play on front.jpg'
+  },
+  {
+    id: 21,
+    name: "Book Cover Illustrations",
+    src: '/book-cover/Play on-Recovered.jpg'
+  },
+  {
+    id: 22,
+    name: "Book Cover Illustrations",
+    src: '/book-cover/NoOrdinaryLove.jpg'
+  },
 ]
 const links = [
   { name: "All" },
@@ -109,7 +134,7 @@ export default function Commissions() {
   const filteredImages = selectedCategory === 'All' ? imagesData : imagesData.filter(image => image.name === selectedCategory);
 
   return (
-    <div className='bg-[#e1e0e0] text-[#545353] mb-0'>
+    <div className='bg-[#e1e0e0] text-[#545353] mb-0 min-h-full'>
       <Navbar />
       <div className=' pt-24 text-center'>
         <p className=' text-2xl'>Commissions</p>

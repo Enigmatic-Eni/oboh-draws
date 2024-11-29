@@ -6,11 +6,12 @@ import React from 'react'
 
 export default function index() {
   return (
-    <div className=''>
+    <div className=' bg-[#e1e0e0] min-h-full'>
       <Navbar/>
+      <div className=' flex-grow'>
       <Carousel/>
       <ShopPrints/>
-<Footer/>
+      </div>
     
     </div>
   )

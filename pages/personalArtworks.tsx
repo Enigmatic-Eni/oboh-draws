@@ -5,7 +5,7 @@ import Footer from '@/components/resusables/Footer';
 
 export default function PersonalArtworks() {
     return (
-        <div className='bg-[#e1e0e0] text-[#545353] mb-0'>
+        <div className='bg-[#e1e0e0] text-[#545353] mb-0 min-h-full'>
             <Navbar />
 
             <div className=' pt-24 text-center'>
