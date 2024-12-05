@@ -124,7 +124,9 @@ const toggleTopBar = (event) => {
           </div>
          )}
               <li>
-                <a href="#" className='hover:font-bold cursor-pointer hover:text-[#a9bdcf]'>About</a>
+              <Link href={'/about'} className='hover:font-bold cursor-pointer hover:text-[#a9bdcf]'>
+              About
+              </Link>
               </li>
             </ul>
           </div>
@@ -178,7 +180,9 @@ const toggleTopBar = (event) => {
               </div>
             </div>
             <li>
-              <a href="#" className='hover:font-bold cursor-pointer hover:text-[#a9bdcf]'>About</a>
+              <Link href={'/about'} className='hover:font-bold cursor-pointer hover:text-[#a9bdcf]'>
+              About
+              </Link>
             </li>
           </ul>
         </div>
