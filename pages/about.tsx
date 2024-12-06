@@ -21,7 +21,7 @@ export default function About() {
                 </div>
                 <br />
                 <div>
-                    <p> <span className=' font-semibold'>YOU'RE AN INCREDIBLE ARTIST! </span>
+                    <p> <span className=' font-semibold'>YOU ARE AN INCREDIBLE ARTIST! </span>
                         <br />
                         <span className=' text-sm'>-Monique Duncan,<span className=' italic'> Children&apos;s Book Author: Freedom Braids… </span></span>
                         <br />
