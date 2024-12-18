@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function SketchBooks() {
   return (
-    <div>  <div className='bg-[#e1e0e0] text-[#545353] mb-0'>
+    <div>  <div className='bg-[#e1e0e0] text-[#545353] mb-0 min-h-screen'>
     <Navbar />
     <div className=' pt-24 text-center'>
            <p className=' text-2xl'>Sketch Books</p>

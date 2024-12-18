@@ -1,3 +1,4 @@
+import ImageModal from '@/components/ImageModal';
 import Footer from '@/components/resusables/Footer';
 import Navbar from '@/components/resusables/Navbar'
 import Image from 'next/image';
@@ -126,6 +127,19 @@ const links = [
 export default function Commissions() {
   const [selectedCategory, setSelectedCategry] = useState('All');
 
+      const [isModalOpen, setIsModalOpen] = useState(false);
+      const [selectedImage, setSelectedImage] = useState('');
+  
+      const handleImageClick = (src) => {
+          setSelectedImage(src);
+          setIsModalOpen(true);
+      };
+  
+      const closeModal = () => {
+          setIsModalOpen(false);
+          setSelectedImage('');
+      };
+  
 
   const handleCategoryClick = (category) => {
     setSelectedCategry(category);
@@ -154,7 +168,7 @@ export default function Commissions() {
       <div className="image-gallery py-11 mansory">
         {filteredImages.map(image => (
           <div key={image.id} className='box'>
-            <Image src={image.src} alt="" width={300} height={300} layout="responsive" quality={90} className='mansory-img transition-transform duration-300 hover:scale-105 hover:cursor-pointer' />
+            <Image src={image.src} alt="" width={300} height={300} layout="responsive" quality={90} className='mansory-img transition-transform duration-300 hover:scale-105 hover:cursor-pointer'  onClick={() => handleImageClick(image.src)}  />
           </div>
         ))
 
@@ -162,6 +176,8 @@ export default function Commissions() {
       </div>
 
       <Footer/>
+
+      <ImageModal isOpen={isModalOpen} onClose={closeModal} imageSrc={selectedImage} />
     </div>
   )
 }
