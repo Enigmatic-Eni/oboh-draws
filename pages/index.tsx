@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function index() {
   return (
-    <div className=' bg-[#e1e0e0] min-h-full'>
+    <div className=' bg-[#e1e0e0] min-h-screen'>
       <Navbar/>
       <div className=' flex-grow'>
       <Carousel/>

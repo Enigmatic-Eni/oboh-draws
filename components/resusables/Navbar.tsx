@@ -41,10 +41,10 @@ const toggleTopBar = (event) => {
 
   return (
     <div className='fixed z-40 w-full bg-[#e8e8e6] text-[#545353]'>
-      <div className='flex md:grid md:grid-cols-2 items-center justify-between px-6 py-1'>
+      <div className='flex md:grid md:grid-cols-2 items-center justify-between px-16 py-2'>
         <div>
           <Link href="/" className=' cursor-pointer'>
-            <img src="logo.jpg" alt="" className='h-14 w-14 rounded-full' />
+            <img src="logo.jpg" alt="" className=' h-14 w-14 rounded-full' />
           </Link>
         </div>
 
@@ -135,7 +135,7 @@ const toggleTopBar = (event) => {
         {/* Links should only be visible on larger screens */}
 
         <div className="links hidden md:block">
-          <ul className='flex justify-between font-semibold mr-5'>
+          <ul className='flex items-end justify-end gap-20 font-semibold '>
             <li>
               <Link href={"/"} className='hover:font-semibold hover:text-[#a9bdcf] cursor-pointer'>
                 Home
