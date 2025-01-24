@@ -21,10 +21,7 @@ export default function Navbar() {
       setIsDropdownOpen(false);
     }
   };
-  const toggleSidebar = (
-    
-  ) => {
-    
+  const toggleSidebar = ( ) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 const toggleTopBar = (event) => {
