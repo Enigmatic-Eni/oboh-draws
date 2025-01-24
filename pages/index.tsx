@@ -1,6 +1,6 @@
-import Carousel from '@/components/resusables/Carousell'
-import Footer from '@/components/resusables/Footer'
-import Navbar from '@/components/resusables/Navbar'
+// import Carousel from '@/components/resusables/Carousell'
+// import Footer from '@/components/resusables/Footer'
+// import Navbar from '@/components/resusables/Navbar'
 import ShopPrints from '@/components/resusables/ShopPrints'
 import React from 'react'
 
